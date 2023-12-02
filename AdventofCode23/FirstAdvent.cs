@@ -91,47 +91,47 @@ namespace AdventofCode23
                 else if (i + 2 < text.Length && text[i].ToString() == "o" && text[i + 1].ToString() == "n" && text[i + 2].ToString() == "e")
                 {
                     numbers.Add("1");
-                    i += 2;
+                    i += 1;
                 }
                 else if (i + 2 < text.Length && text[i].ToString() == "t" && text[i + 1].ToString() == "w" && text[i + 2].ToString() == "o")
                 {
                     numbers.Add("2");
-                    i += 2;
+                    i += 1;
                 }
                 else if (i + 4 < text.Length && text[i].ToString() == "t" && text[i + 1].ToString() == "h" && text[i + 2].ToString() == "r" && text[i + 3].ToString() == "e" && text[i + 4].ToString() == "e")
                 {
                     numbers.Add("3");
-                    i += 4;
+                    i += 3;
                 }
                 else if (i + 3 < text.Length && text[i].ToString() == "f" && text[i + 1].ToString() == "o" && text[i + 2].ToString() == "u" && text[i + 3].ToString() == "r")
                 {
                     numbers.Add("4");
-                    i += 3;
+                    i += 2;
                 }
                 else if (i + 3 < text.Length && text[i].ToString() == "f" && text[i + 1].ToString() == "i" && text[i + 2].ToString() == "v" && text[i + 3].ToString() == "e")
                 {
                     numbers.Add("5");
-                    i += 3;
+                    i += 2;
                 }
                 else if (i + 2 < text.Length && text[i].ToString() == "s" && text[i + 1].ToString() == "i" && text[i + 2].ToString() == "x")
                 {
                     numbers.Add("6");
-                    i += 2;
+                    i += 1;
                 }
                 else if (i + 4 < text.Length && text[i].ToString() == "s" && text[i + 1].ToString() == "e" && text[i + 2].ToString() == "v" && text[i + 3].ToString() == "e" && text[i + 4].ToString() == "n")
                 {
                     numbers.Add("7");
-                    i += 4;
+                    i += 3;
                 }
-                else if (i + 5 < text.Length && text[i].ToString() == "e" && text[i + 1].ToString() == "i" && text[i + 2].ToString() == "g" && text[i + 3].ToString() == "h" && text[i + 4].ToString() == "t")
+                else if (i + 4 < text.Length && text[i].ToString() == "e" && text[i + 1].ToString() == "i" && text[i + 2].ToString() == "g" && text[i + 3].ToString() == "h" && text[i + 4].ToString() == "t")
                 {
                     numbers.Add("8");
-                    i += 5;
+                    i += 3;
                 }
                 else if (i + 3 < text.Length && text[i].ToString() == "n" && text[i + 1].ToString() == "i" && text[i + 2].ToString() == "n" && text[i + 3].ToString() == "e")
                 {
                     numbers.Add("9");
-                    i += 3;
+                    i += 2;
                 }
             }
 
@@ -149,14 +149,7 @@ namespace AdventofCode23
             string firstDigit = numbers[0].ToString();
             string lastDigit = numbers[numbers.Length - 1].ToString();
 
-            if (numbers.Length > 1)
-            {
-                finalNumber = firstDigit + lastDigit;
-            }
-            else
-            {
-                finalNumber = firstDigit;
-            }
+            finalNumber = firstDigit + lastDigit;
 
             // Add the concatenated value to the result
             result = int.Parse($"{finalNumber}");
